@@ -1,0 +1,22 @@
+export const SliderData = [
+    {
+      image:
+        'https://i.blogs.es/6c7c38/cartoon-network-amazon-prime-video-mexico/840_560.jpg'
+    },
+    {
+      image:
+        'http://chavorrucxs.com/wp-content/uploads/2021/04/cartoon-network-cartoons-klashkrool-deviantart_765757.png'
+    },
+    {
+      image:
+        'https://pm1.narvii.com/6146/3b60a1be597eb993d7066cfa026f1e3fa0f297ae_hq.jpg'
+    },
+    {
+      image:
+        'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2020/05/marvel-dc-1932490.jpg?itok=sFnFxBxw'
+    },
+    {
+      image:
+        'https://www.mundopeliculas.tv/wp-content/uploads/2018/04/Superh%C3%A9roes-Marvel.jpg'
+    }
+  ];
