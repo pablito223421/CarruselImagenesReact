@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { SliderData } from './SliderData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
+
+
+
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -18,6 +21,10 @@ const ImageSlider = ({ slides }) => {
     return null;
   }
 
+  const moveDot = index => {
+    setCurrent(index)
+}
+
   return (
     <section className='slider'>
       <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
@@ -26,12 +33,22 @@ const ImageSlider = ({ slides }) => {
         return (
           <div
             className={index === current ? 'slide active' : 'slide'}
-            key={index}
+            key={slide.id}
           >
             {index === current && (
               // eslint-disable-next-line jsx-a11y/img-redundant-alt
-              <img src={slide.image} alt='travel image' className='image' />
+              <img src={slide.image} alt={slide.title} className='image' />
+              
             )}
+            < p className='slide-description'>{slide.title}</p> 
+            <div className="container-dots">
+                {Array.from({length: 5}).map((item, index) => (
+                    <div 
+                    onClick={() => moveDot(index + 1)}
+                    className={current === index + 1 ? "dot active" : "dot"}
+                    ></div>
+                ))}
+            </div>
           </div>
         );
       })}
